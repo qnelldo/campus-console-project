@@ -3,7 +3,10 @@ import java.util.Scanner;
 public class StarPoint {
 
 	public static void main(String[] args) {
-		System.out.println("만들고 싶은 삼각형의 높이를 숫자로 적어주세요.");
+		System.out.println("* 하삼각형 *");
+		System.out.println();
+		System.out.println("만들고 싶은 하삼각형의 높이를 숫자로 적어주세요.");
+		System.out.println("예시) 5");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 
@@ -19,8 +22,8 @@ public class StarPoint {
 			}
 			System.out.println();
 
-			sc.close();
 		}
+		sc.close();
 
 	}
 
