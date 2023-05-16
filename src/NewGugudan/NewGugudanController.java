@@ -1,3 +1,4 @@
+
 package NewGugudan;
 
 class NewGugudanController {
@@ -23,19 +24,19 @@ class NewGugudanController {
 				view.displayMultiplicationTable(dan);
 				model.generateMultiplicationTable(dan);
 
-				shouldContinue = view.getContinueInput();
+
 			} catch (NumberFormatException e) {
 				System.out.println("1~9 사이의 정수 값을 입력해주세요.");
-				view.closeScanner();
-				return;
+				
+				continue;
 			} catch (IllegalArgumentException e) {
 				System.out.println(e.getMessage());
-				view.closeScanner();
-				return;
+			
+				continue;
 			}
+			 shouldContinue = view.getContinueInput();
 		}
-
-		System.out.println("구구단 끝!");
+		System.out.println("프로그램을 종료합니다.");
 		view.closeScanner();
 	}
 }

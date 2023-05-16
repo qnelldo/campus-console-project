@@ -19,9 +19,18 @@ class NewGugudanView {
 	}
 
 	public boolean getContinueInput() {
-		System.out.print("계속 하시겠습니까? (y/n): ");
-		String input = scanner.next();
-		return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
+		while (true) {
+			System.out.print("계속 하시겠습니까? (y/n): ");
+			String input = scanner.next();
+			if (input.equalsIgnoreCase("n") || input.equalsIgnoreCase("no")) {
+				closeScanner();
+				return false;
+			} else if (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) {
+				return true;
+			} else {
+				System.out.println("유효한 입력값이 아닙니다. 다시 입력해주세요.");
+			}
+		}
 	}
 
 	public void closeScanner() {
